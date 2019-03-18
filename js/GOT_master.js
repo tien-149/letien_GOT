@@ -8,12 +8,7 @@
 			closeLB     = document.querySelector('.lightbox-close');
 			banners		= document.querySelector('#houseImages');
 
-	// function slideIMG() {
-	// 	let targetIMG = this.id();
-	// 	let targetImages = targetIMG; 
-	// 	image.src = `images/${}.jpg`;
-	// 	image.show();
-	// }
+
 
 	function openLightbox() {
 		//Grap the right video source
@@ -44,8 +39,10 @@
 
 		//this is the total distance the images need to mive as a puxel value 
 		//dataset.offset is comming from each sheild we click on 
-		totalOffset = this.dataset.offset * offSet + "px";
-		banners.style.right = totalOffset;
+		totalOffset = this.dataset.offset * offSet ;
+		// banners.style.right = totalOffset;
+		// 
+		TweenMax.to(banners, 0.8, {right: totalOffset });
 	}
 	// sigils.forEach(sigil => sigil.addEventListener('click', openLightbox));
 	sigils.forEach(sigil => sigil.addEventListener('click', animateBanner));
