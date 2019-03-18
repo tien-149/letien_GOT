@@ -8,9 +8,11 @@
 		  video = document.querySelector('.video');
 	function showLightbox() {
 		lightBox.classList.add('show-lightbox');
+		// lightBox.classList.add('lightbox-on');
 	}
 	function hideLightbox() {
 		lightBox.classList.remove('show-lightbox');
+		// lightBox.classList.remove('lightbox-on');
 	}
 
 	shields.forEach(shield => shield.addEventListener('click', showLightbox));
