@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 
 /* ----- custom font ----- */
@@ -36,7 +37,11 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px;/* transition: all .5s;*/ }
+#houseImages { 
+	position:relative; 
+	width:5800px; 
+	/*transition: all .5s;*/ 
+}
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -80,9 +85,21 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
-/* ----- end image sprite ----- */
 
-/* ----- classes for transitions ----- */
+.targaryen { background-position:-304px -54px; }
+.targaryen:hover { background-position:-304px 0px; }
+
+.tyrell { background-position:-355px -54px; }
+.tyrell:hover { background-position:-355px 0px; }
+
+.frey { background-position:-406px -54px; }
+.frey:hover { background-position:-406px 0px; }
+
+
+
+/* end image sprite  */
+
+/*  classes for transitions */
 
 .scaleUp {
 	-moz-transform:scale(1.7, 1.7);
@@ -97,33 +114,40 @@ main {
 }
 
 /* add styles here for lightbox and video */
+
 .lightbox {
 	position: absolute;
-	text-align: center;
-	width: 100%;
 	top: 0;
-	background-color: rgba(0, 0, 0, 0.9);
 	height: 100%;
+	width: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.9);
 	display: none;
 }
 
-.lightbox-on {
-	display: block;
-}
+.show-lightbox { display: block; }
 
-.lightbox-close{
+.lightbox-close {
 	position: absolute;
 	color: white;
+	font-size: 2rem;
 	right: 12px;
 	top: 12px;
-	cursor:pointer;
-	font-size:2em;
+	cursor: pointer;
 }
-
-
 
 video {
 	width: 80%;
 	margin-top: 10%;
 	border: thin solid #949393;
+}
+
+.house-info {
+	color: white;
+	font-size: 1.5rem;
+	margin: 20px auto 0 auto;
+	width: 70%;
+	text-align: justify;
+	letter-spacing: 1px;
+	line-height: 1.2;
 }
