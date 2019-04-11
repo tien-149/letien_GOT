@@ -65,6 +65,8 @@
 		// move the banners using the right css property
 		//topBanners.style.right = currentOffset + "px";
 		TweenMax.to(topBanners, 0.7, { right: currentOffset });
+		TweenMax.to([shields], 1, {opacity:0.7, scale:1.2});
+
 
 		// change the text content on the page per house
 		houseInfo.textContent = houseData[this.dataset.offset][1];
@@ -78,9 +80,24 @@
 	//shields.forEach(shield => shield.addEventListener('click', showLightbox));	
 	// animate the banners at the top
 	shields.forEach(shield => shield.addEventListener('click', animateBanners));
+
 	// callback();
 	shields.forEach(shield => shield.addEventListener('click', showLightbox));
+
 
 	video.addEventListener('ended', hideLightbox);
 	lbClose.addEventListener('click', hideLightbox);
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
