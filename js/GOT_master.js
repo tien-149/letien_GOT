@@ -29,9 +29,9 @@
 		[`FREY`, `House Frey of the Twins was the Great House of the Riverlands, having gained their position for their treachery against their former liege lords, House Tully, who were stripped of all their lands and titles for their rebellion against the Iron Throne; House Tully had supported the independence movement for the Kingdom of the North. The current head of the house is unknown following the assassinations of Lord Walder Frey and two of his sons, Lothar Frey and Walder Rivers, by the vengeful Arya Stark. This is made more complex by the subsequent assassination of all the male Freys soon after.`]
 	];
 
-	function showLightbox() {
+	function showLightbox(afterAnimation) {
 		//debugger;
-		let targetHouse = this.className.split(" ")[1];
+		let targetHouse = afterAnimation.className.split(" ")[1];
 
 		// this gives us a lowercase house name -> the second class on all of the shields is stark, baratheon
 		// flip this to uppercase
@@ -82,7 +82,8 @@
 	shields.forEach(shield => shield.addEventListener('click', animateBanners));
 
 	// callback();
-	shields.forEach(shield => shield.addEventListener('click', showLightbox));
+	shields.forEach(shield => shield.addEventListener('click', () => {
+	setTimeout( () => {showLightbox(shield)}, 5000)}));
 
 
 	video.addEventListener('ended', hideLightbox);
